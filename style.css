@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #435036, #9ae262);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition:background 0.4s ease;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+
+.input-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  background: rgba(255,255,255,0.9);
+  font-size: 14px;
+}
+
+#add-btn {
+  border: none;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#add-btn:hover {
+  background: #45a049;
+}
+
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#clear-btn {
+border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;  
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#theme-toggle{
+    border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;  
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#clear-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+#clear-btn:hover {
+  background: #c0392b;
+}
+
+#theme-toggle {
+  background: #555;
+  color: white;
+}
+
+#theme-toggle:hover {
+  background: #333;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255,255,255,0.9);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: fadeIn 0.4s ease;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+button.delete {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+button.delete:hover {
+  background: #d93636;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.dark-mode {
+  background: linear-gradient(135deg, #222, #000);
+  color: white;
+}
+
+.dark-mode .container {
+  background: rgba(50,50,50,0.5);
+  color: white;
+}
+
+.dark-mode input {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.dark-mode li {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.dark-mode button.delete {
+  background: #ff5555;
+}
